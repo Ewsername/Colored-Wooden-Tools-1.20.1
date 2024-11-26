@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "colored-wooden-tools",
+	"version": "${version}",
+	"name": "Colored Wooden Tools",
+	"description": "A simple mod that adds color variants to wooden tools depending on wood type.",
+	"authors": [
+		"Bunmuppet"
+	],
+	"contact": {
+		"homepage": "https://www.curseforge.com/members/bunmuppet/projects",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/colored-wooden-tools/colored-tools-logo.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.bunmuppen.coloredwoodentools.ColoredWoodenTools"
+		],
+		"client": [
+			"net.bunmuppen.coloredwoodentools.ColoredWoodenToolsClient"
+		],
+		"fabric-datagen": [
+			"net.bunmuppen.coloredwoodentools.ColoredWoodenToolsDataGenerator"
+		]
+	},
+	"mixins": [
+		"colored-wooden-tools.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
