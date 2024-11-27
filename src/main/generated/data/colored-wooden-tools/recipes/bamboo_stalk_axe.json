@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "minecraft:bamboo"
+    },
+    "S": {
+      "item": "minecraft:bamboo_slab"
+    },
+    "X": {
+      "item": "colored-wooden-tools:bamboo_stalk"
+    }
+  },
+  "pattern": [
+    "XS ",
+    "XB ",
+    " B "
+  ],
+  "result": {
+    "item": "colored-wooden-tools:bamboo_stalk_axe"
+  },
+  "show_notification": true
+}

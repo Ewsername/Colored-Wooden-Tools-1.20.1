@@ -1,24 +1,24 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_acacia_planks": {
+    "has_cherry_planks": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:acacia_planks"
+              "minecraft:cherry_planks"
             ]
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_acacia_slab": {
+    "has_cherry_slab": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:acacia_slab"
+              "minecraft:cherry_slab"
             ]
           }
         ]
@@ -27,7 +27,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:wooden_acacia_axe"
+        "recipe": "minecraft:wooden_cherry_pickaxe"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -46,15 +46,15 @@
   },
   "requirements": [
     [
-      "has_acacia_planks",
-      "has_acacia_slab",
+      "has_cherry_planks",
+      "has_cherry_slab",
       "has_wooden_handle",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:wooden_acacia_axe"
+      "minecraft:wooden_cherry_pickaxe"
     ]
   },
   "sends_telemetry_event": false

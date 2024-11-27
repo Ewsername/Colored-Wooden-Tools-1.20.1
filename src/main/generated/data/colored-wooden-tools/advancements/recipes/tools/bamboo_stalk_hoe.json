@@ -1,24 +1,36 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_acacia_planks": {
+    "has_bamboo": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:acacia_planks"
+              "minecraft:bamboo"
             ]
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_acacia_slab": {
+    "has_bamboo_planks": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:acacia_slab"
+              "minecraft:bamboo_planks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_bamboo_stalk": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "colored-wooden-tools:bamboo_stalk"
             ]
           }
         ]
@@ -27,34 +39,22 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:wooden_acacia_axe"
+        "recipe": "minecraft:bamboo_stalk_hoe"
       },
       "trigger": "minecraft:recipe_unlocked"
-    },
-    "has_wooden_handle": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "colored-wooden-tools:wooden_handle"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
     }
   },
   "requirements": [
     [
-      "has_acacia_planks",
-      "has_acacia_slab",
-      "has_wooden_handle",
+      "has_bamboo",
+      "has_bamboo_planks",
+      "has_bamboo_stalk",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:wooden_acacia_axe"
+      "minecraft:bamboo_stalk_hoe"
     ]
   },
   "sends_telemetry_event": false

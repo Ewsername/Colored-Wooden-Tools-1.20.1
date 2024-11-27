@@ -4,10 +4,10 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.util.Identifier;
-import net.minecraft.registry.Registries;
 import net.bunmuppen.coloredwoodentools.item.ModItems;
 
 import java.util.function.Consumer;
@@ -20,6 +20,184 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
+
+        //BAMBOO SPECIAL ITEMS RECIPES ---------------------------------------------------------------------------
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.BAMBOO_SHANK)
+                .input(Items.BAMBOO)
+                .input(Items.FLINT)
+                .criterion(hasItem(Items.BAMBOO),
+                        conditionsFromItem(Items.BAMBOO))
+                .criterion(hasItem(Items.FLINT),
+                        conditionsFromItem(Items.FLINT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.BAMBOO_SHANK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.BAMBOO_STALK)
+                .pattern(" P ")
+                .pattern(" B ")
+                .pattern(" # ")
+                .input('B', Items.BAMBOO)
+                .input('P', Items.BAMBOO_PLANKS)
+                .input('#', ModItems.BAMBOO_SHANK)
+                .criterion(hasItem(Items.BAMBOO),
+                        conditionsFromItem(Items.BAMBOO))
+                .criterion(hasItem(Items.BAMBOO_PLANKS),
+                        conditionsFromItem(Items.BAMBOO_PLANKS))
+                .criterion(hasItem(ModItems.BAMBOO_SHANK),
+                        conditionsFromItem(ModItems.BAMBOO_SHANK))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.BAMBOO_STALK)));
+
+        //MISC BAMBOO
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.CARVED_PUMPKIN)
+                .input(Items.PUMPKIN)
+                .input(ModItems.BAMBOO_SHANK)
+                .criterion(hasItem(Items.BAMBOO_PLANKS),
+                        conditionsFromItem(Items.BAMBOO_PLANKS))
+                .criterion(hasItem(ModItems.BAMBOO_SHANK),
+                        conditionsFromItem(ModItems.BAMBOO_SHANK))
+                .offerTo(exporter, new Identifier(getRecipeName(Items.CARVED_PUMPKIN)));
+
+        //BAMBOO TOOLS RECIPES -----------------------------------------------------------------------------------
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.BAMBOO_STALK_AXE)
+                .pattern("XS ")
+                .pattern("XB ")
+                .pattern(" B ")
+                .input('B', Items.BAMBOO)
+                .input('S', Items.BAMBOO_SLAB)
+                .input('X', ModItems.BAMBOO_STALK)
+                .criterion(hasItem(ModItems.BAMBOO_STALK),
+                        conditionsFromItem(ModItems.BAMBOO_STALK))
+                .criterion(hasItem(Items.BAMBOO_SLAB),
+                        conditionsFromItem(Items.BAMBOO_SLAB))
+                .criterion(hasItem(Items.BAMBOO),
+                        conditionsFromItem(Items.BAMBOO))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.BAMBOO_STALK_AXE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.BAMBOO_STALK_HOE)
+                .pattern("XP ")
+                .pattern(" B ")
+                .pattern(" B ")
+                .input('B', Items.BAMBOO)
+                .input('P', Items.BAMBOO_PLANKS)
+                .input('X', ModItems.BAMBOO_STALK)
+                .criterion(hasItem(Items.BAMBOO),
+                        conditionsFromItem(Items.BAMBOO))
+                .criterion(hasItem(Items.BAMBOO_PLANKS),
+                        conditionsFromItem(Items.BAMBOO_PLANKS))
+                .criterion(hasItem(ModItems.BAMBOO_STALK),
+                        conditionsFromItem(ModItems.BAMBOO_STALK))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.BAMBOO_STALK_HOE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.BAMBOO_STALK_PICKAXE)
+                .pattern("XSX")
+                .pattern(" B ")
+                .pattern(" B ")
+                .input('B', Items.BAMBOO)
+                .input('S', Items.BAMBOO_SLAB)
+                .input('X', ModItems.BAMBOO_STALK)
+                .criterion(hasItem(Items.BAMBOO),
+                        conditionsFromItem(Items.BAMBOO))
+                .criterion(hasItem(Items.BAMBOO_SLAB),
+                        conditionsFromItem(Items.BAMBOO_SLAB))
+                .criterion(hasItem(ModItems.BAMBOO_STALK),
+                        conditionsFromItem(ModItems.BAMBOO_STALK))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.BAMBOO_STALK_PICKAXE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.BAMBOO_STALK_SHOVEL)
+                .pattern(" X ")
+                .pattern(" B ")
+                .pattern(" B ")
+                .input('B', Items.BAMBOO)
+                .input('X', ModItems.BAMBOO_STALK)
+                .criterion(hasItem(Items.BAMBOO),
+                        conditionsFromItem(Items.BAMBOO))
+                .criterion(hasItem(ModItems.BAMBOO_STALK),
+                        conditionsFromItem(ModItems.BAMBOO_STALK))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.BAMBOO_STALK_SHOVEL)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.BAMBOO_STALK_SWORD)
+                .pattern(" # ")
+                .pattern(" K ")
+                .pattern(" B ")
+                .input('B', Items.BAMBOO)
+                .input('K', Items.BAMBOO_BLOCK)
+                .input('#', ModItems.BAMBOO_SHANK)
+                .criterion(hasItem(Items.BAMBOO),
+                        conditionsFromItem(Items.BAMBOO))
+                .criterion(hasItem(Items.BAMBOO_BLOCK),
+                        conditionsFromItem(Items.BAMBOO_BLOCK))
+                .criterion(hasItem(ModItems.BAMBOO_SHANK),
+                        conditionsFromItem(ModItems.BAMBOO_SHANK))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.BAMBOO_STALK_SWORD)));
+
+
+        //CHERRY TOOLS RECIPES -----------------------------------------------------------------------------------
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.WOODEN_CHERRY_AXE)
+                .pattern(" P ")
+                .pattern("SP ")
+                .pattern(" X ")
+                .input('P', Items.CHERRY_PLANKS)
+                .input('S', Items.CHERRY_SLAB)
+                .input('X', ModItems.WOODEN_HANDLE)
+                .criterion(hasItem(Items.CHERRY_PLANKS),
+                        conditionsFromItem(Items.CHERRY_PLANKS))
+                .criterion(hasItem(Items.CHERRY_SLAB),
+                        conditionsFromItem(Items.CHERRY_SLAB))
+                .criterion(hasItem(ModItems.WOODEN_HANDLE),
+                        conditionsFromItem(ModItems.WOODEN_HANDLE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.WOODEN_CHERRY_AXE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.WOODEN_CHERRY_HOE)
+                .pattern("SP ")
+                .pattern(" X ")
+                .input('P', Items.CHERRY_PLANKS)
+                .input('S', Items.CHERRY_SLAB)
+                .input('X', ModItems.WOODEN_HANDLE)
+                .criterion(hasItem(Items.CHERRY_PLANKS),
+                        conditionsFromItem(Items.CHERRY_PLANKS))
+                .criterion(hasItem(Items.CHERRY_SLAB),
+                        conditionsFromItem(Items.CHERRY_SLAB))
+                .criterion(hasItem(ModItems.WOODEN_HANDLE),
+                        conditionsFromItem(ModItems.WOODEN_HANDLE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.WOODEN_CHERRY_HOE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.WOODEN_CHERRY_PICKAXE)
+                .pattern("PPS")
+                .pattern(" X ")
+                .input('P', Items.CHERRY_PLANKS)
+                .input('S', Items.CHERRY_SLAB)
+                .input('X', ModItems.WOODEN_HANDLE)
+                .criterion(hasItem(Items.CHERRY_PLANKS),
+                        conditionsFromItem(Items.CHERRY_PLANKS))
+                .criterion(hasItem(Items.CHERRY_SLAB),
+                        conditionsFromItem(Items.CHERRY_SLAB))
+                .criterion(hasItem(ModItems.WOODEN_HANDLE),
+                        conditionsFromItem(ModItems.WOODEN_HANDLE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.WOODEN_CHERRY_PICKAXE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.WOODEN_CHERRY_SHOVEL)
+                .pattern("S  ")
+                .pattern(" X ")
+                .input('S', Items.CHERRY_SLAB)
+                .input('X', ModItems.WOODEN_HANDLE)
+                .criterion(hasItem(Items.CHERRY_SLAB),
+                        conditionsFromItem(Items.CHERRY_SLAB))
+                .criterion(hasItem(ModItems.WOODEN_HANDLE),
+                        conditionsFromItem(ModItems.WOODEN_HANDLE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.WOODEN_CHERRY_SHOVEL)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.WOODEN_CHERRY_SWORD)
+                .pattern("P  ")
+                .pattern(" X ")
+                .input('P', Items.CHERRY_PLANKS)
+                .input('X', ModItems.WOODEN_HANDLE)
+                .criterion(hasItem(Items.CHERRY_PLANKS),
+                        conditionsFromItem(Items.CHERRY_PLANKS))
+                .criterion(hasItem(Items.CHERRY_SLAB),
+                        conditionsFromItem(Items.CHERRY_SLAB))
+                .criterion(hasItem(ModItems.WOODEN_HANDLE),
+                        conditionsFromItem(ModItems.WOODEN_HANDLE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.WOODEN_CHERRY_SWORD)));
 
         //ACACIA TOOLS RECIPES -----------------------------------------------------------------------------------
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.WOODEN_ACACIA_AXE)
@@ -35,8 +213,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         conditionsFromItem(Items.ACACIA_SLAB))
                 .criterion(hasItem(ModItems.WOODEN_HANDLE),
                         conditionsFromItem(ModItems.WOODEN_HANDLE))
-                .offerTo(exporter, new Identifier(Registries.ITEM.getId(ModItems.WOODEN_ACACIA_AXE).getNamespace(),
-                        "wooden_acacia_axe"));
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.WOODEN_ACACIA_AXE)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.WOODEN_ACACIA_HOE)
                 .pattern("SP ")

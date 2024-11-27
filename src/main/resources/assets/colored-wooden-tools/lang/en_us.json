@@ -1,6 +1,20 @@
 {
 
   "item.colored-wooden-tools.wooden_handle": "Wooden Handle",
+  "item.colored-wooden-tools.bamboo_shank": "Bamboo Shank",
+  "item.colored-wooden-tools.bamboo_stalk": "Bamboo Stalk",
+
+  "item.colored-wooden-tools.bamboo_stalk_pickaxe": "Bamboo Stalk Pickaxe",
+  "item.colored-wooden-tools.bamboo_stalk_sword": "Bamboo Stalk Sword",
+  "item.colored-wooden-tools.bamboo_stalk_hoe": "Bamboo Stalk Hoe",
+  "item.colored-wooden-tools.bamboo_stalk_axe": "Bamboo Stalk Axe",
+  "item.colored-wooden-tools.bamboo_stalk_shovel": "Bamboo Stalk Shovel",
+
+  "item.colored-wooden-tools.wooden_cherry_pickaxe": "Wooden Cherry Pickaxe",
+  "item.colored-wooden-tools.wooden_cherry_sword": "Wooden Cherry Sword",
+  "item.colored-wooden-tools.wooden_cherry_hoe": "Wooden Cherry Hoe",
+  "item.colored-wooden-tools.wooden_cherry_axe": "Wooden Cherry Axe",
+  "item.colored-wooden-tools.wooden_cherry_shovel": "Wooden Cherry Shovel",
 
 
   "item.colored-wooden-tools.wooden_birch_pickaxe": "Wooden Birch Pickaxe",

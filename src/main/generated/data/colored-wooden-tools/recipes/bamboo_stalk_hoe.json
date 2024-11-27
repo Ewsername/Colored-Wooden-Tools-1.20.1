@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "minecraft:bamboo"
+    },
+    "P": {
+      "item": "minecraft:bamboo_planks"
+    },
+    "X": {
+      "item": "colored-wooden-tools:bamboo_stalk"
+    }
+  },
+  "pattern": [
+    "XP ",
+    " B ",
+    " B "
+  ],
+  "result": {
+    "item": "colored-wooden-tools:bamboo_stalk_hoe"
+  },
+  "show_notification": true
+}

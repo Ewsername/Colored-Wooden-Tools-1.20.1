@@ -12,7 +12,9 @@ public class ModItems {
 
     //ITEM GROUPS
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries){
-        entries.add(WOODEN_HANDLE);}
+        entries.add(WOODEN_HANDLE);
+        entries.add(BAMBOO_STALK);
+    }
 
     private static void addItemsToCombatItemGroup(FabricItemGroupEntries entries){
         entries.add(WOODEN_BIRCH_SWORD);
@@ -23,6 +25,8 @@ public class ModItems {
         entries.add(WOODEN_JUNGLE_SWORD);
         entries.add(WOODEN_MANGROVE_SWORD);
         entries.add(WOODEN_WARPED_SWORD);
+        entries.add(WOODEN_CHERRY_SWORD);
+        entries.add(BAMBOO_STALK_SWORD);
         entries.add(WOODEN_BIRCH_AXE);
         entries.add(WOODEN_ACACIA_AXE);
         entries.add(WOODEN_SPRUCE_AXE);
@@ -31,6 +35,9 @@ public class ModItems {
         entries.add(WOODEN_JUNGLE_AXE);
         entries.add(WOODEN_MANGROVE_AXE);
         entries.add(WOODEN_WARPED_AXE);
+        entries.add(WOODEN_CHERRY_AXE);
+        entries.add(BAMBOO_STALK_AXE);
+        entries.add(BAMBOO_SHANK);
     }
 
     private static void addItemsToToolsItemGroup(FabricItemGroupEntries entries){
@@ -42,6 +49,8 @@ public class ModItems {
         entries.add(WOODEN_JUNGLE_PICKAXE);
         entries.add(WOODEN_MANGROVE_PICKAXE);
         entries.add(WOODEN_WARPED_PICKAXE);
+        entries.add(WOODEN_CHERRY_PICKAXE);
+        entries.add(BAMBOO_STALK_PICKAXE);
         entries.add(WOODEN_BIRCH_HOE);
         entries.add(WOODEN_ACACIA_HOE);
         entries.add(WOODEN_SPRUCE_HOE);
@@ -50,6 +59,8 @@ public class ModItems {
         entries.add(WOODEN_JUNGLE_HOE);
         entries.add(WOODEN_MANGROVE_HOE);
         entries.add(WOODEN_WARPED_HOE);
+        entries.add(WOODEN_CHERRY_HOE);
+        entries.add(BAMBOO_STALK_HOE);
         entries.add(WOODEN_BIRCH_SHOVEL);
         entries.add(WOODEN_ACACIA_SHOVEL);
         entries.add(WOODEN_SPRUCE_SHOVEL);
@@ -58,10 +69,14 @@ public class ModItems {
         entries.add(WOODEN_JUNGLE_SHOVEL);
         entries.add(WOODEN_MANGROVE_SHOVEL);
         entries.add(WOODEN_WARPED_SHOVEL);
+        entries.add(WOODEN_CHERRY_SHOVEL);
+        entries.add(BAMBOO_STALK_SHOVEL);
+
     }
 
     //WOODEN HANDLE STATISTICS
     public static final Item WOODEN_HANDLE = registerTool("wooden_handle", new Item(new Item.Settings()));
+    public static final Item BAMBOO_STALK = registerTool("bamboo_stalk", new Item(new Item.Settings()));
 
     //HANDLE LOGIC
     public static Item registerTool(String name, Item item) {
@@ -70,6 +85,20 @@ public class ModItems {
                 new Identifier(ColoredWoodenTools.MOD_ID, name), item
         );
     }
+
+    //BAMBOO SHANK STATISTICS
+    public static final Item BAMBOO_SHANK = DurabilityCraftingSwordItem("bamboo_shank",
+            ToolMaterials.WOOD, 1, -0.4F);
+
+    //BAMBOO SHANK LOGIC
+    public static Item DurabilityCraftingSwordItem(String name, ToolMaterial material, int attackDamage, float attackSpeed) {
+        return Registry.register(
+                Registries.ITEM,
+                new Identifier(ColoredWoodenTools.MOD_ID, name),
+                new DurabilityCraftingSwordItem(material, attackDamage, attackSpeed, new Item.Settings().maxDamage(30))
+        );
+    }
+
 
     // SWORD STATISTICS
     public static final Item WOODEN_BIRCH_SWORD = registerSword("wooden_birch_sword",
@@ -87,6 +116,10 @@ public class ModItems {
     public static final Item WOODEN_MANGROVE_SWORD  = registerSword("wooden_mangrove_sword",
             ToolMaterials.WOOD, 3, -2.4F);
     public static final Item WOODEN_WARPED_SWORD  = registerSword("wooden_warped_sword",
+            ToolMaterials.WOOD, 3, -2.4F);
+    public static final Item WOODEN_CHERRY_SWORD  = registerSword("wooden_cherry_sword",
+            ToolMaterials.WOOD, 3, -2.4F);
+    public static final Item BAMBOO_STALK_SWORD  = registerSword("bamboo_stalk_sword",
             ToolMaterials.WOOD, 3, -2.4F);
 
     // SWORD LOGIC
@@ -114,6 +147,10 @@ public class ModItems {
             ToolMaterials.WOOD, 1, -2.8F);
     public static final Item WOODEN_WARPED_PICKAXE = registerPickaxe("wooden_warped_pickaxe",
             ToolMaterials.WOOD, 1, -2.8F);
+    public static final Item WOODEN_CHERRY_PICKAXE = registerPickaxe("wooden_cherry_pickaxe",
+            ToolMaterials.WOOD, 1, -2.8F);
+    public static final Item BAMBOO_STALK_PICKAXE = registerPickaxe("bamboo_stalk_pickaxe",
+            ToolMaterials.WOOD, 1, -2.8F);
 
     //PICKAXE LOGIC
     public static Item registerPickaxe(String name, ToolMaterials material, int attackDamage, float attackSpeed) {
@@ -139,6 +176,10 @@ public class ModItems {
     public static final Item WOODEN_MANGROVE_AXE = registerAxe("wooden_mangrove_axe",
             ToolMaterials.WOOD,  6, -3.2F);
     public static final Item WOODEN_WARPED_AXE = registerAxe("wooden_warped_axe",
+            ToolMaterials.WOOD,  6, -3.2F);
+    public static final Item WOODEN_CHERRY_AXE = registerAxe("wooden_cherry_axe",
+            ToolMaterials.WOOD,  6, -3.2F);
+    public static final Item BAMBOO_STALK_AXE = registerAxe("bamboo_stalk_axe",
             ToolMaterials.WOOD,  6, -3.2F);
 
     //AXE LOGIC
@@ -167,6 +208,11 @@ public class ModItems {
             ToolMaterials.WOOD,  0, -3.0F);
     public static final Item WOODEN_WARPED_HOE  = registerHoe("wooden_warped_hoe",
             ToolMaterials.WOOD,  0, -3.0F);
+    public static final Item WOODEN_CHERRY_HOE  = registerHoe("wooden_cherry_hoe",
+            ToolMaterials.WOOD,  0, -3.0F);
+    public static final Item BAMBOO_STALK_HOE  = registerHoe("bamboo_stalk_hoe",
+            ToolMaterials.WOOD,  0, -3.0F);
+
 
     //HOE LOGIC
     public static Item registerHoe(String name, ToolMaterials material, int attackDamage, float attackSpeed) {
@@ -193,6 +239,10 @@ public class ModItems {
     public static final Item WOODEN_MANGROVE_SHOVEL  = registerShovel("wooden_mangrove_shovel",
             ToolMaterials.WOOD,  1.5, -3.0F);
     public static final Item WOODEN_WARPED_SHOVEL  = registerShovel("wooden_warped_shovel",
+            ToolMaterials.WOOD,  1.5, -3.0F);
+    public static final Item WOODEN_CHERRY_SHOVEL  = registerShovel("wooden_cherry_shovel",
+            ToolMaterials.WOOD,  1.5, -3.0F);
+    public static final Item BAMBOO_STALK_SHOVEL  = registerShovel("bamboo_stalk_shovel",
             ToolMaterials.WOOD,  1.5, -3.0F);
 
     //SHOVEL LOGIC
