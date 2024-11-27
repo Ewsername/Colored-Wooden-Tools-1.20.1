@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "colored-wooden-tools:item/wooden_crimson_shovel"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "minecraft:crimson_slab"
+    },
+    "X": {
+      "item": "colored-wooden-tools:wooden_handle"
+    }
+  },
+  "pattern": [
+    "S  ",
+    " X "
+  ],
+  "result": {
+    "item": "colored-wooden-tools:wooden_crimson_shovel"
+  },
+  "show_notification": true
+}

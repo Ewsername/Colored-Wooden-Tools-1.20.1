@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "P": {
+      "item": "minecraft:jungle_planks"
+    },
+    "S": {
+      "item": "minecraft:jungle_slab"
+    },
+    "X": {
+      "item": "colored-wooden-tools:wooden_handle"
+    }
+  },
+  "pattern": [
+    " P ",
+    "SP ",
+    " X "
+  ],
+  "result": {
+    "item": "colored-wooden-tools:wooden_jungle_axe"
+  },
+  "show_notification": true
+}

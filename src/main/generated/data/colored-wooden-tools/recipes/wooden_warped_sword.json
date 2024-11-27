@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "P": {
+      "item": "minecraft:warped_planks"
+    },
+    "X": {
+      "item": "colored-wooden-tools:wooden_handle"
+    }
+  },
+  "pattern": [
+    "P  ",
+    " X "
+  ],
+  "result": {
+    "item": "colored-wooden-tools:wooden_warped_sword"
+  },
+  "show_notification": true
+}

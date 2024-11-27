@@ -1,0 +1,60 @@
+{
+
+  "item.colored-wooden-tools.wooden_handle": "Wooden Handle",
+
+
+  "item.colored-wooden-tools.wooden_birch_pickaxe": "Wooden Birch Pickaxe",
+  "item.colored-wooden-tools.wooden_birch_sword": "Wooden Birch Sword",
+  "item.colored-wooden-tools.wooden_birch_hoe": "Wooden Birch Hoe",
+  "item.colored-wooden-tools.wooden_birch_axe": "Wooden Birch Axe",
+  "item.colored-wooden-tools.wooden_birch_shovel": "Wooden Birch Shovel",
+
+
+  "item.colored-wooden-tools.wooden_acacia_axe": "Wooden Acacia Axe",
+  "item.colored-wooden-tools.wooden_acacia_hoe": "Wooden Acacia Hoe",
+  "item.colored-wooden-tools.wooden_acacia_pickaxe": "Wooden Acacia Pickaxe",
+  "item.colored-wooden-tools.wooden_acacia_shovel": "Wooden Acacia Shovel",
+  "item.colored-wooden-tools.wooden_acacia_sword": "Wooden Acacia Sword",
+
+
+  "item.colored-wooden-tools.wooden_crimson_axe": "Wooden Crimson Axe",
+  "item.colored-wooden-tools.wooden_crimson_hoe": "Wooden Crimson Hoe",
+  "item.colored-wooden-tools.wooden_crimson_pickaxe": "Wooden Crimson Pickaxe",
+  "item.colored-wooden-tools.wooden_crimson_shovel": "Wooden Crimson Shovel",
+  "item.colored-wooden-tools.wooden_crimson_sword": "Wooden Crimson Sword",
+
+
+  "item.colored-wooden-tools.wooden_dark_oak_axe": "Wooden Dark Oak Axe",
+  "item.colored-wooden-tools.wooden_dark_oak_hoe": "Wooden Dark Oak Hoe",
+  "item.colored-wooden-tools.wooden_dark_oak_pickaxe": "Wooden Dark Oak Pickaxe",
+  "item.colored-wooden-tools.wooden_dark_oak_shovel": "Wooden Dark Oak Shovel",
+  "item.colored-wooden-tools.wooden_dark_oak_sword": "Wooden Dark Oak Sword",
+
+
+  "item.colored-wooden-tools.wooden_jungle_axe": "Wooden Jungle Axe",
+  "item.colored-wooden-tools.wooden_jungle_hoe": "Wooden Jungle Hoe",
+  "item.colored-wooden-tools.wooden_jungle_pickaxe": "Wooden Jungle Pickaxe",
+  "item.colored-wooden-tools.wooden_jungle_shovel": "Wooden Jungle Shovel",
+  "item.colored-wooden-tools.wooden_jungle_sword": "Wooden Jungle Sword",
+
+
+  "item.colored-wooden-tools.wooden_mangrove_axe": "Wooden Mangrove Axe",
+  "item.colored-wooden-tools.wooden_mangrove_hoe": "Wooden Mangrove Hoe",
+  "item.colored-wooden-tools.wooden_mangrove_pickaxe": "Wooden Mangrove Pickaxe",
+  "item.colored-wooden-tools.wooden_mangrove_shovel": "Wooden Mangrove Shovel",
+  "item.colored-wooden-tools.wooden_mangrove_sword": "Wooden Mangrove Sword",
+
+
+  "item.colored-wooden-tools.wooden_spruce_axe": "Wooden Spruce Axe",
+  "item.colored-wooden-tools.wooden_spruce_hoe": "Wooden Spruce Hoe",
+  "item.colored-wooden-tools.wooden_spruce_pickaxe": "Wooden Spruce Pickaxe",
+  "item.colored-wooden-tools.wooden_spruce_shovel": "Wooden Spruce Shovel",
+  "item.colored-wooden-tools.wooden_spruce_sword": "Wooden Spruce Sword",
+
+
+  "item.colored-wooden-tools.wooden_warped_axe": "Wooden Warped Axe",
+  "item.colored-wooden-tools.wooden_warped_hoe": "Wooden Warped Hoe",
+  "item.colored-wooden-tools.wooden_warped_pickaxe": "Wooden Warped Pickaxe",
+  "item.colored-wooden-tools.wooden_warped_shovel": "Wooden Warped Shovel",
+  "item.colored-wooden-tools.wooden_warped_sword": "Wooden Warped Sword"
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "P": {
+      "item": "minecraft:birch_planks"
+    },
+    "S": {
+      "item": "minecraft:birch_slab"
+    },
+    "X": {
+      "item": "colored-wooden-tools:wooden_handle"
+    }
+  },
+  "pattern": [
+    "SP ",
+    " X "
+  ],
+  "result": {
+    "item": "colored-wooden-tools:wooden_birch_hoe"
+  },
+  "show_notification": true
+}
