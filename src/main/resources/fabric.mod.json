@@ -12,7 +12,7 @@
 		"sources": "https://github.com/Ewsername/Colored-Wooden-Tools-1.20.1"
 	},
 	"license": "MIT",
-	"icon": "assets/colored-wooden-tools/colored-tools-logo.png",
+	"icon": "assets/colored-wooden-tools/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
